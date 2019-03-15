@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-3-15 11:26:57 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.vo.Warrior" table="WARRIOR">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="power" type="int">
+            <column name="POWER" />
+        </property>
+        <property name="skill" type="java.lang.String">
+            <column name="SKILL" />
+        </property>
+        <property name="sects" type="java.lang.String">
+            <column name="SECTS" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <primitive-array name="photo" table="WARRIOR">
+            <key>
+                <column name="ID" />
+            </key>
+            <index></index>
+            <element type="byte">
+                <column name="PHOTO" />
+            </element>
+        </primitive-array>
+    </class>
+</hibernate-mapping>

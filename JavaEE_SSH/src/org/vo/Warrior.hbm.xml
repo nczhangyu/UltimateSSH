@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2019-3-15 11:26:57 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="org.vo.Warrior" table="WARRIOR">
+    <class name="org.vo.Warrior" table="WARRIORS">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="assigned" />
@@ -23,7 +23,7 @@
         <property name="sex" type="java.lang.String">
             <column name="SEX" />
         </property>
-        <primitive-array name="photo" table="WARRIOR">
+       <!--  <primitive-array name="photo" table="WARRIORS">
             <key>
                 <column name="ID" />
             </key>
@@ -31,6 +31,9 @@
             <element type="byte">
                 <column name="PHOTO" />
             </element>
-        </primitive-array>
+        </primitive-array> -->
+        <property name="photo">
+        	<column name="photo"></column>
+        </property>
     </class>
 </hibernate-mapping>

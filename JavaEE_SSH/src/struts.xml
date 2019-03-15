@@ -8,6 +8,9 @@
   			<result name="success">/result.jsp</result>
   			<result name="error">/error.jsp</result>
   		</action>
+  		<action name="getImage" class="org.action.SearchAction" method="getImage">
+  			
+  		</action>
   	</package>
-  
+    
   </struts>

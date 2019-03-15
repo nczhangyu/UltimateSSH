@@ -3,6 +3,7 @@ package org.action;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts2.ServletActionContext;
@@ -23,12 +24,13 @@ public class SearchAction extends ActionSupport{
 		this.warrior = warrior;
 	}
 	
-	/*public String getImage() throws Exception{					//“≥√Êœ‘ æÕº∆¨
+	public String getImage() throws Exception{					//“≥√Êœ‘ æÕº∆¨
 		HttpServletResponse response = ServletActionContext.getResponse();
 		//int id = warrior.getId();
-		String name = warrior.getName();
-		WarriorDao wd = new WarriorDao();
-		Warrior war = wd.searchWar(name);
+		//String name = warrior.getName();
+		int id = warrior.getId();
+		SearchDao wd = new SearchDao();
+		Warrior war = wd.searchWar(id);
 		byte[] ph = war.getPhoto();
 		response.setContentType("image/jpeg");
 		ServletOutputStream outputStream = response.getOutputStream();
@@ -39,7 +41,7 @@ public class SearchAction extends ActionSupport{
 			outputStream.flush();
 		}
 		return NONE;
-	}*/
+	}
 	public String execute() throws Exception{
 		SearchDao sd = new SearchDao();
 		List lists = sd.searchAll();
